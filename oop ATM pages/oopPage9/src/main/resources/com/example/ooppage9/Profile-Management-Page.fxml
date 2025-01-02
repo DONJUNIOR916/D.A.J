@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="602.0" prefWidth="592.0" spacing="20" style="-fx-padding: 20; -fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1">
+   <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Profile Management" />
+
+   <GridPane hgap="10" vgap="10">
+      <Label text="First Name:" />
+      <TextField fx:id="firstNameField" promptText="Enter your first name" GridPane.columnIndex="1" />
+
+      <Label text="Last Name:" GridPane.rowIndex="1" />
+      <TextField fx:id="lastNameField" prefHeight="25.0" prefWidth="441.0" promptText="Enter your last name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+      <Label text="CNI Number:" GridPane.rowIndex="3" />
+      <TextField fx:id="cniField" promptText="Enter your CNI number" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+      <Label text="Email:" GridPane.rowIndex="2" />
+      <TextField fx:id="emailField" promptText="Enter your email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+      <Label text="Phone Number:" GridPane.rowIndex="4" />
+      <TextField fx:id="phoneField" prefHeight="25.0" prefWidth="397.0" promptText="Enter your phone number" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <columnConstraints>
+         <ColumnConstraints maxWidth="116.0" minWidth="89.0" prefWidth="105.0" />
+         <ColumnConstraints maxWidth="392.0" minWidth="365.0" prefWidth="376.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      </rowConstraints>
+   </GridPane>
+
+   <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Change Password" />
+
+   <GridPane hgap="10" vgap="10">
+      <Label text="Old Password:" />
+      <PasswordField fx:id="oldPasswordField" prefHeight="25.0" prefWidth="189.0" promptText="Enter old password" GridPane.columnIndex="1" />
+
+         <Label text="New Password:" GridPane.rowIndex="1" />
+      <PasswordField fx:id="newPasswordField" prefHeight="25.0" prefWidth="123.0" promptText="Enter new password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+         <Label text="Confirm Password:" GridPane.rowIndex="2" />
+      <PasswordField fx:id="confirmPasswordField" prefHeight="25.0" prefWidth="372.0" promptText="Confirm new password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="Old Password:" />
+      <columnConstraints>
+         <ColumnConstraints maxWidth="199.0" minWidth="0.0" prefWidth="104.0" />
+         <ColumnConstraints maxWidth="199.0" minWidth="0.0" prefWidth="95.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      </rowConstraints>
+   </GridPane>
+
+   <Button fx:id="saveButton" text="Save Changes" />
+   <Button fx:id="backButton" text="Back to Dashboard" />
+</VBox>
